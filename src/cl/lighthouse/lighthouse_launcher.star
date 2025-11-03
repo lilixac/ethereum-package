@@ -309,6 +309,7 @@ def get_beacon_config(
 
     env_vars = {RUST_BACKTRACE_ENVVAR_NAME: RUST_FULL_BACKTRACE_KEYWORD}
     env_vars.update(participant.cl_extra_env_vars)
+    print(cmd)
     config_args = {
         "image": participant.cl_image,
         "ports": used_ports,

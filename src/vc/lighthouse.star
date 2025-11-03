@@ -121,6 +121,8 @@ def get_config(
     )
     for mount_path, artifact in processed_mounts.items():
         files[mount_path] = artifact
+    
+    print(cmd)
 
     config_args = {
         "image": image,
@@ -141,6 +143,8 @@ def get_config(
         "tolerations": tolerations,
         "node_selectors": node_selectors,
     }
+
+   
 
     if participant.vc_min_cpu > 0:
         config_args["min_cpu"] = participant.vc_min_cpu
